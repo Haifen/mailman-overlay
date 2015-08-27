@@ -17,9 +17,10 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-#flufl lazr falcon zope
+#flufl lazr falcon
 DEPEND="dev-python/alembic[${PYTHON_USEDEP}]
 dev-python/httplib2[${PYTHON_USEDEP}]
+dev-python/nose2[${PYTHON_USEDEP}]
 dev-python/passlib[${PYTHON_USEDEP}]
 dev-python/sqlalchemy[${PYTHON_USEDEP}]
 dev-python/zope-component[${PYTHON_USEDEP}]
