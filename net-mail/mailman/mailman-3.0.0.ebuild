@@ -22,6 +22,8 @@ DEPEND="dev-python/alembic[${PYTHON_USEDEP}]
 dev-python/httplib2[${PYTHON_USEDEP}]
 dev-python/passlib[${PYTHON_USEDEP}]
 dev-python/sqlalchemy[${PYTHON_USEDEP}]
+dev-python/zope-component[${PYTHON_USEDEP}]
+dev-python/zope-configuration[${PYTHON_USEDEP}]
 dev-python/zope-event[${PYTHON_USEDEP}]
 dev-python/zope-interface[${PYTHON_USEDEP}]
 "
