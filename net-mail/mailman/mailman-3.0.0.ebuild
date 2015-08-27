@@ -12,7 +12,7 @@ DESCRIPTION="Mailman -- the GNU mailing list manager"
 HOMEPAGE="http://www.list.org"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
-LICENSE="GPLv3"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
