@@ -19,6 +19,10 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND=""
+DEPEND="dev-python/nose[${PYTHON_USEDEP}]
+dev-python/setuptools[${PYTHON_USEDEP}]
+dev-python/zope-interface[${PYTHON_USEDEP}]
+dev-python/lazr-delegates[${PYTHON_USEDEP}]
+"
 RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P}
