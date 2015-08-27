@@ -20,6 +20,8 @@ IUSE=""
 #flufl lazr falcon
 DEPEND="dev-python/alembic[${PYTHON_USEDEP}]
 dev-python/httplib2[${PYTHON_USEDEP}]
+dev-python/lazr-config[${PYTHON_USEDEP}]
+dev-python/lazr-smtptest[${PYTHON_USEDEP}]
 dev-python/mock[${PYTHON_USEDEP}]
 dev-python/nose2[${PYTHON_USEDEP}]
 dev-python/passlib[${PYTHON_USEDEP}]
