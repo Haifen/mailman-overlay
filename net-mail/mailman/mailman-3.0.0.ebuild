@@ -17,8 +17,11 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-#flufl lazr falcon
+#falcon
 DEPEND="dev-python/alembic[${PYTHON_USEDEP}]
+dev-python/flufl-bounce[${PYTHON_USEDEP}]
+dev-python/flufl-i18n[${PYTHON_USEDEP}]
+dev-python/flufl-lock[${PYTHON_USEDEP}]
 dev-python/httplib2[${PYTHON_USEDEP}]
 dev-python/lazr-config[${PYTHON_USEDEP}]
 dev-python/lazr-smtptest[${PYTHON_USEDEP}]
