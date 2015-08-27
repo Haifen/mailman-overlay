@@ -20,6 +20,7 @@ IUSE=""
 #flufl lazr falcon
 DEPEND="dev-python/alembic[${PYTHON_USEDEP}]
 dev-python/httplib2[${PYTHON_USEDEP}]
+dev-python/mock[${PYTHON_USEDEP}]
 dev-python/nose2[${PYTHON_USEDEP}]
 dev-python/passlib[${PYTHON_USEDEP}]
 dev-python/sqlalchemy[${PYTHON_USEDEP}]
