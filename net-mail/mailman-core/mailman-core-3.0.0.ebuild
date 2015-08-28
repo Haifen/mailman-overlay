@@ -42,3 +42,8 @@ dev-python/zope-interface[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P}
+
+src_install() {
+	newinitd "${FILESDIR}"/mailman-initd mailman
+	distutils-r1_src_install
+}
