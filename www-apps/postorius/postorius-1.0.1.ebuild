@@ -3,14 +3,17 @@
 # $Id$
 
 EAPI=5
-PYTHON_COMPAT=( python2_7 pypy )
-WEBAPP_NO_AUTO_INSTALL="yes"
+PYTHON_COMPAT=( python2_7 )
+#WEBAPP_NO_AUTO_INSTALL="yes"
 
-inherit distutils-r1 webapp
+inherit distutils-r1 git-r3
 
 DESCRIPTION="A web user interface for GNU Mailman"
 HOMEPAGE="https://launchpad.net/postorius"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+EGIT_REPO_URI="https://gitlab.com/mailman/postorius_standalone.git"
+EGIT_COMMIT="e52dffa0"
+EGIT_CHECKOUT_DIR="${WORKDIR}/${P}_standalone"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -23,17 +26,18 @@ dev-python/mailmanclient[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}"
 
-# FIXME: move webapp stuff to postorius_standalone?
-WEBAPP_MANUAL_SLOT="yes"
+src_unpack() {
+	git-r3_src_unpack
+	default_src_unpack
+}
 
-pkg_setup() {
-	webapp_pkg_setup
-}
 src_install() {
-	webapp_src_preinst
+	insinto /usr/share/postorius
+	doins "${EGIT_CHECKOUT_DIR}"/{manage,settings,urls}.py
+	doins -r "${EGIT_CHECKOUT_DIR}/srv"
 	distutils-r1_src_install
-	webapp_src_install
 }
-pkg_postinst() {
-	webapp_pkg_postinst
+
+pkg_postint() {
+	elog "Example config files have been installed in /usr/share/postorius"
 }
