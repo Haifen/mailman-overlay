@@ -6,11 +6,15 @@ EAPI=5
 
 PYTHON_COMPAT=( python3_4 )
 
+MY_PN=mailman
+MY_P=${MY_PN}-${PV}
+
+
 inherit distutils-r1
 
 DESCRIPTION="Mailman -- the GNU mailing list manager"
 HOMEPAGE="http://www.list.org"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -35,3 +39,4 @@ dev-python/zope-event[${PYTHON_USEDEP}]
 dev-python/zope-interface[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}"
+S=${WORKDIR}/${MY_P}
