@@ -3,10 +3,10 @@
 # $Id$
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
+PYTHON_COMPAT=( python2_7 pypy )
 WEBAPP_NO_AUTO_INSTALL="yes"
 
-inherit distutils-r1 python-utils-r1 webapp
+inherit distutils-r1 webapp
 
 DESCRIPTION="A web user interface for GNU Mailman"
 HOMEPAGE="https://launchpad.net/postorius"
@@ -24,12 +24,6 @@ dev-python/mailmanclient[${PYTHON_USEDEP}]
 RDEPEND="${DEPEND}"
 
 WEBAPP_MANUAL_SLOT="yes"
-
-python_prepare() {
-	if python_is_python3; then
-		2to3 -n -w --no-diffs src || die
-	fi
-}
 
 pkg_setup() {
 	webapp_pkg_setup
