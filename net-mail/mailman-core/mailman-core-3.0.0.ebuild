@@ -9,7 +9,6 @@ PYTHON_COMPAT=( python3_4 )
 MY_PN=mailman
 MY_P=${MY_PN}-${PV}
 
-
 inherit distutils-r1
 
 DESCRIPTION="Mailman -- the GNU mailing list manager"
