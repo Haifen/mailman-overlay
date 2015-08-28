@@ -18,9 +18,12 @@ EGIT_CHECKOUT_DIR="${WORKDIR}/${P}_standalone"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="apache2"
 
-DEPEND=">=dev-python/django-1.6[${PYTHON_USEDEP}]
+DEPEND="
+virtual/httpd-cgi
+apache2? ( www-apache/mod_wsgi[${PYTHON_USEDEP}] )
+>=dev-python/django-1.6[${PYTHON_USEDEP}]
 dev-python/django-browserid[${PYTHON_USEDEP}]
 dev-python/mailmanclient[${PYTHON_USEDEP}]
 "

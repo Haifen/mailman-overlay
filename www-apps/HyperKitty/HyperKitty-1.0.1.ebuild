@@ -17,9 +17,12 @@ EGIT_CHECKOUT_DIR="${WORKDIR}/${P}_standalone"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="apache2"
 
 DEPEND="
+virtual/cron
+virtual/httpd-cgi
+apache2? ( www-apache/mod_wsgi[${PYTHON_USEDEP}] )
 || ( >=dev-python/django-1.7[${PYTHON_USEDEP}] ( >=dev-python/django-1.6[${PYTHON_USEDEP}] >=dev-python/south-1.0[${PYTHON_USEDEP}] ) )
 >=dev-python/django-gravatar2-1.0.6[${PYTHON_USEDEP}]
 >=dev-python/python-social-auth-0.2.3[${PYTHON_USEDEP}]
