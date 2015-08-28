@@ -23,3 +23,9 @@ dev-python/requests[${PYTHON_USEDEP}]
 net-mail/mailman-core[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}"
+
+src_install() {
+	insinto /usr/share/mailman-hyperkitty
+	doins mailman-hyperkitty.cfg
+	distutils-r1_src_install
+}
