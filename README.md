@@ -6,3 +6,10 @@ Gentoo overlay for mailman 3.0
 * postorius_standalone
 * mailman-hyperkitty
 * net-mail/mailman meta package
+* HyperKitty
+* django-gravatar2
+* djangorestframework
+* rjsmin
+* cssmin
+* robot-detection
+* django-paintstore
