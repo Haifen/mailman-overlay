@@ -23,6 +23,7 @@ dev-python/mailmanclient[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}"
 
+# FIXME: move webapp stuff to postorius_standalone?
 WEBAPP_MANUAL_SLOT="yes"
 
 pkg_setup() {
