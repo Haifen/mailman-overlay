@@ -6,10 +6,3 @@ Gentoo overlay for mailman 3.0
 * add openrc script(s)
 * hyperkitty_standalone
 * postorius_standalone
-* HyperKitty
-* django-gravatar2
-* djangorestframework
-* rjsmin
-* cssmin
-* robot-detection
-* django-paintstore
