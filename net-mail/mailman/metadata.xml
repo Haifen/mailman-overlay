@@ -5,4 +5,9 @@
 	<maintainer>
 		<email>hanno@gentoo.org</email>
 	</maintainer>
+	<use>
+		<flag name="client">Enable support for the REST API Python bindings</flag>
+		<flag name="postorius">Enable support for Postorius web ui</flag>
+		<flag name="HyperKitty">Enable support for the HyperKitty archiver</flag>
+	</use>
 </pkgmetadata>

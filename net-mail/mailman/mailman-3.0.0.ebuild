@@ -10,13 +10,14 @@ HOMEPAGE="http://www.list.org"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="+client +postorius +HyperKitty"
+REQUIRED_USE="postorius? ( client )
+HyperKitty? ( client )"
 
-# FIXME: hyperkitty_standalone postorius_standalone
 DEPEND="net-mail/mailman-core
-dev-python/mailmanclient
-dev-python/mailman-hyperkitty
-www-apps/postorius
-www-apps/HyperKitty
+client? ( dev-python/mailmanclient )
+postorius? ( www-apps/postorius )
+HyperKitty? ( dev-python/mailman-hyperkitty
+www-apps/HyperKitty )
 "
 RDEPEND="${DEPEND}"

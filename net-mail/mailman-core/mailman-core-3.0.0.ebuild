@@ -18,9 +18,12 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="postgres"
 
-DEPEND="dev-python/alembic[${PYTHON_USEDEP}]
+DEPEND="
+virtual/mta
+postgres? ( dev-python/psycopg:2[${PYTHON_USEDEP}] )
+dev-python/alembic[${PYTHON_USEDEP}]
 >=dev-python/falcon-0.3.0[${PYTHON_USEDEP}]
 dev-python/flufl-bounce[${PYTHON_USEDEP}]
 dev-python/flufl-i18n[${PYTHON_USEDEP}]
