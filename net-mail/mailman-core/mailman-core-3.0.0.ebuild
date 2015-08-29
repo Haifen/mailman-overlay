@@ -47,3 +47,7 @@ src_install() {
 	newinitd "${FILESDIR}"/mailman-initd mailman
 	distutils-r1_src_install
 }
+
+pkg_postint() {
+	elog "The 3.0 mailman-core package no longer contains an archiver or web ui, you may want to install the new net-mail/mailman meta package"
+}
