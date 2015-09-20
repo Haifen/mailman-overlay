@@ -42,7 +42,7 @@ dev-python/python-dateutil[${PYTHON_USEDEP}]
 >=dev-python/django-haystack-2.1.0[${PYTHON_USEDEP}]
 >=dev-python/django-extensions-1.3.7[${PYTHON_USEDEP}]
 >=dev-python/lockfile-0.9.1[${PYTHON_USEDEP}]
->=dev-python/Whoosh-2.5.7[${PYTHON_USEDEP}]
+>=dev-python/whoosh-2.5.7[${PYTHON_USEDEP}]
 dev-lang/lessjs
 "
 RDEPEND="${DEPEND}"
