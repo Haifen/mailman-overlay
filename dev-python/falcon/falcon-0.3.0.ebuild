@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
+PYTHON_COMPAT=( python{2_7,3_3,3_4,3_5} pypy )
 
 inherit distutils-r1
 
@@ -20,12 +20,12 @@ IUSE="+cython test"
 RDEPEND=">=dev-python/six-1.4.0[${PYTHON_USEDEP}]
 	dev-python/mimeparse[${PYTHON_USEDEP}]
 	cython? (
-	dev-python/cython[$(python_gen_usedep python{2_7,3_3,3_4})] )"
+	dev-python/cython[$(python_gen_usedep python{2_7,3_3,3_4,3_5})] )"
 
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
-	dev-python/cython[$(python_gen_usedep python{2_7,3_3,3_4})]
+	dev-python/cython[$(python_gen_usedep python{2_7,3_3,3_4,3_5})]
 		dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/testtools[${PYTHON_USEDEP}] )"
 
