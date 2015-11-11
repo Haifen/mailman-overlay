@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python{2_7,3_3,3_4,3_5} pypy )
 
 inherit distutils-r1
 
-DESCRIPTION="Essential Gravatar support for Django. Features helper methods, templatetags and a full test suite!"
+DESCRIPTION="Essential Gravatar support for Django."
 HOMEPAGE="https://github.com/twaddington/django-gravatar"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
